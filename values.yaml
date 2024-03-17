@@ -399,7 +399,7 @@ certManager:
   truststorePasswd: changeme
   replaceDefaultTrustStore: false
   additionalDnsNames:
-    - localhost
+    - nifi.local
   refreshSeconds: 300
   resources:
     requests:
