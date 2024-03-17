@@ -250,7 +250,7 @@ sidecar:
 ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
 ##
 persistence:
-  enabled: false
+  enabled: true
 
   # When creating persistent storage, the NiFi helm chart can either reference an already-defined
   # storage class by name, such as "standard" or can define a custom storage class by specifying
@@ -373,7 +373,7 @@ openshift:
 # The ca server will be used to generate self-signed certificates required setting up secured cluster
 ca:
   ## If true, enable the nifi-toolkit certificate authority
-  enabled: false
+  enabled: true
   persistence:
     enabled: true
   server: ""
@@ -393,7 +393,7 @@ ca:
 # Setting this true will have cert-manager create a private CA for the cluster
 # as well as the certificates for each cluster node.
 certManager:
-  enabled: false
+  enabled: true
   clusterDomain: cluster.local
   keystorePasswd: changeme
   truststorePasswd: changeme
@@ -425,7 +425,7 @@ certManager:
 zookeeper:
   ## If true, install the Zookeeper chart
   ## ref: https://github.com/bitnami/charts/blob/master/bitnami/zookeeper/values.yaml
-  enabled: true
+  enabled: false
   ## If the Zookeeper Chart is disabled a URL and port are required to connect
   url: ""
   port: 2181
