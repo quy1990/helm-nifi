@@ -228,11 +228,12 @@ containerPorts: []
 ## Configure Ingress based on the documentation here: https://kubernetes.io/docs/concepts/services-networking/ingress/
 ##
 ingress:
-  enabled: false
+  enabled: true
   # className: nginx
   annotations: {}
   tls: []
-  hosts: []
+  hosts: 
+    - "nifi.local"
   path: /
   # If you want to change the default path, see this issue https://github.com/cetic/helm-nifi/issues/22
 
